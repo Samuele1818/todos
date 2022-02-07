@@ -3,9 +3,11 @@ import "./styles.css";
 
 const TODOItem = ({ item, deleteItem, checkItem }) => {
   return (
-    <div onClick={() => checkItem} className="todo-item">
-      <p className={item.complete && "checked"}>{item.task}</p>
+    <div className="todo-item">
       <button onClick={deleteItem} />
+      <div onClick={checkItem}>
+        <p className={item.complete && "checked"}>{item.task}</p>
+      </div>
     </div>
   );
 };
